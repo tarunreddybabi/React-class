@@ -30,6 +30,8 @@ function App() {
           <td class="th"> 3000 </td>
           <td class="th"> 1200 </td>
         </tr>
+
+        
         <tr class="th">
           <td class="th">1001  </td>
           <td class="th" >Mark Otto </td>
