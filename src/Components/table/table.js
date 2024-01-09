@@ -1,4 +1,28 @@
 
+const formdetails=[{id:"1",
+Company:"TCS",
+Price:"$1.2",
+Change:"+2.01",
+ChangePercentile:"+0.36%"},
+{id:"2",
+Company:"Infosys",
+Price:"$2.9",
+Change:"3.65",
+ChangePercentile:"+1.26%"},
+{
+  id:"3",
+Company:"IBM",
+Price:"$1.9",
+Change:"0.8",
+ChangePercentile:"+1.26%"
+},
+{
+  id:"4",
+Company:"Cognizant",
+Price:"$2.3",
+Change:"1.8",
+ChangePercentile:"+2.6%"
+}]
 
 
 
@@ -6,40 +30,27 @@
 const TableItem=()=>{
     return (
         <div>
-            <table class="th" id="table" >
-        <tr class="th">
-        <th class="th">Company</th>
-        <th class="th">Price</th>
-        <th class="th">Change</th>
-        <th class="th">Change %</th>
+            <table className="th" id="table" >
+        <tr className="th">
+        <th className="th">Company</th>
+        <th className="th">Price</th>
+        <th className="th">Change</th>
+        <th className="th">Change %</th>
         </tr>
-        <tr class="th">
-          <td class="th">Indian Company </td>
-          <td class="th" > $1.2</td>
-          <td class="th" >+2.01  </td>
-          <td class="th"> +0.36% </td>
-         
+        
+        {formdetails.map((val)=>(
+
+        
+          <tr className="th">
+          <td className="th">{val.Company} </td>
+          <td className="th" > {val.Price}</td>
+          <td className="th" >{val.Change} </td>
+          <td className="th"> {val.ChangePercentile} </td>
         </tr>
-        <tr class="th">
-          <td class="th">Infosys </td>
-          <td class="th">$2.9 </td>
-          <td class="th">+3.65 </td>
-          <td class="th">+1.26% </td>
-          
-        </tr>
-        <tr class="th">
-          <td class="th">IBM  </td>
-          <td class="th" >$1.9 </td>
-          <td class="th" >+0.98 </td>
-          <td class="th"> +1.32% </td>
-          
-        </tr>
-        <tr class="th">
-          <td class="th">Cognizant  </td>
-          <td class="th">+2.3 </td>
-          <td class="th">+1.80  </td>
-          <td class="th"> +2.8% </td>
-        </tr></table>
+
+        ))}
+        </table>
+      
         </div>
     )
 }

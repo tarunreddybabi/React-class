@@ -1,9 +1,10 @@
 // import logo from './logo.svg';
 import './App.css';
 import ButtonComponent from './components/button/button';
-import OrderComponent from './components/list/order';
 import TableItem from './components/table/table';
 import {FormItem} from './components/form/form';
+import { OrderedListComponents } from './components/list/ol-ul';
+import { UnorderedListComponents } from './components/list/ol-ul';
 
 function App() {
   const tableElements={Invoice:"1001",Customer:"Mark Otto",
@@ -109,8 +110,9 @@ function App() {
 
 <FormItem>
 </FormItem><ButtonComponent/>
-  <OrderComponent/>
-  <OrderComponent/>
+<OrderedListComponents/>
+<UnorderedListComponents/>
+  
 
       </div>
 
