@@ -1,11 +1,16 @@
 // import logo from './logo.svg';
 import './App.css';
-import ButtonComponent from './Components/button/Button';
-import OrderComponent from './Components/list/order';
-import TableItem from './Components/table/table';
-import FormItem from './Components/form/form';
+import ButtonComponent from './components/button/button';
+import OrderComponent from './components/list/order';
+import TableItem from './components/table/table';
+import {FormItem} from './components/form/form';
 
 function App() {
+  const tableElements={Invoice:"1001",Customer:"Mark Otto",
+  SHP:"Japan",
+  Price:"3000",
+  PurchasedPrice:"1200"}
+  const {Invoice,Customer,SHP,Price,PurchasedPrice}=tableElements
   return (
     <div>
       <br></br>
@@ -17,48 +22,48 @@ function App() {
         <th class="th">Price</th>
         <th class="th">Purchased Price</th></tr>
         <tr class="th">
-          <td class="th">1001  </td>
-          <td class="th" >Mark Otto </td>
-          <td class="th" >Japan  </td>
-          <td class="th"> 3000 </td>
-          <td class="th"> 1200 </td>
+          <td class="th">{Invoice}</td>
+          <td class="th" >{Customer} </td>
+          <td class="th" >{SHP}  </td>
+          <td class="th"> {Price} </td>
+          <td class="th"> {PurchasedPrice} </td>
         </tr>
         <tr class="th">
-          <td class="th">1001  </td>
-          <td class="th">Mark Otto </td>
-          <td class="th">Japan  </td>
-          <td class="th"> 3000 </td>
-          <td class="th"> 1200 </td>
+        <td class="th">{Invoice}</td>
+          <td class="th" >{Customer} </td>
+          <td class="th" >{SHP}  </td>
+          <td class="th"> {Price} </td>
+          <td class="th"> {PurchasedPrice} </td>
         </tr>
 
         
         <tr class="th">
-          <td class="th">1001  </td>
-          <td class="th" >Mark Otto </td>
-          <td class="th" >Japan  </td>
-          <td class="th"> 3000 </td>
-          <td class="th"> 1200 </td>
+        <td class="th">{Invoice}</td>
+          <td class="th" >{Customer} </td>
+          <td class="th" >{SHP}  </td>
+          <td class="th"> {Price} </td>
+          <td class="th"> {PurchasedPrice} </td>
         </tr>
         <tr class="th">
-          <td class="th">1001  </td>
-          <td class="th">Mark Otto </td>
-          <td class="th">Japan  </td>
-          <td class="th"> 3000 </td>
-          <td class="th"> 1200 </td>
+        <td class="th">{Invoice}</td>
+          <td class="th" >{Customer} </td>
+          <td class="th" >{SHP}  </td>
+          <td class="th"> {Price} </td>
+          <td class="th"> {PurchasedPrice} </td>
         </tr>
         <tr class="th">
-          <td class="th">1001  </td>
-          <td class="th" >Mark Otto </td>
-          <td class="th" >Japan  </td>
-          <td class="th"> 3000 </td>
-          <td class="th"> 1200 </td>
+        <td class="th">{Invoice}</td>
+          <td class="th" >{Customer} </td>
+          <td class="th" >{SHP}  </td>
+          <td class="th"> {Price} </td>
+          <td class="th"> {PurchasedPrice} </td>
         </tr>
         <tr class="th">
-          <td class="th">1001  </td>
-          <td class="th">Mark Otto </td>
-          <td class="th">Japan  </td>
-          <td class="th"> 3000 </td>
-          <td class="th"> 1200 </td>
+        <td class="th">{Invoice}</td>
+          <td class="th" >{Customer} </td>
+          <td class="th" >{SHP}  </td>
+          <td class="th"> {Price} </td>
+          <td class="th"> {PurchasedPrice} </td>
         </tr>
       </table>
       <ButtonComponent></ButtonComponent>

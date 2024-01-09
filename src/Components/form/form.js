@@ -1,7 +1,7 @@
 
 
 
-const FormItem=()=>{
+export const FormItem=()=>{
     return (
     <form>
       <h1>Form</h1>
@@ -24,4 +24,3 @@ const FormItem=()=>{
     )
 }
 
-export default FormItem
