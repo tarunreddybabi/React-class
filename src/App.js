@@ -5,6 +5,7 @@ import TableItem from './components/table/table';
 import {FormItem} from './components/form/form';
 import { OrderedListComponents } from './components/list/ol-ul';
 import { UnorderedListComponents } from './components/list/ol-ul';
+import ButtonComponent1 from './components/classbased/button1';
 
 function App() {
   const tableElements={Invoice:"1001",Customer:"Mark Otto",
@@ -112,7 +113,7 @@ function App() {
 </FormItem><ButtonComponent/>
 <OrderedListComponents/>
 <UnorderedListComponents/>
-  
+  <ButtonComponent1/>
 
       </div>
 
