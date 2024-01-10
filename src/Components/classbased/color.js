@@ -22,7 +22,7 @@ handleColor=()=>{
 
 render(){
 
-    const backgroundColor = this.state.isChanged ? "black" : "white";
+    const backgroundColor = this.state.isChanged ? "white" : "black";
     return (
         <>
         <button style={{backgroundColor}} className="button" onClick={this.handleColor}>{this.state.isChanged ? this.state.message2:this.state.message1}</button>
