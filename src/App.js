@@ -6,6 +6,8 @@ import {FormItem} from './components/form/form';
 import { OrderedListComponents } from './components/list/ol-ul';
 import { UnorderedListComponents } from './components/list/ol-ul';
 import ButtonComponent1 from './components/classbased/button1';
+import ColorChange from './components/classbased/color';
+import ImageChange from './components/classbased/image';
 
 function App() {
   const tableElements={Invoice:"1001",Customer:"Mark Otto",
@@ -114,6 +116,8 @@ function App() {
 <OrderedListComponents/>
 <UnorderedListComponents/>
   <ButtonComponent1/>
+  <ColorChange/>
+  <ImageChange/>
 
       </div>
 

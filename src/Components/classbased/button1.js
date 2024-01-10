@@ -6,8 +6,9 @@ import { Component } from "react";
 
 class ButtonComponent1 extends Component{
     state={
-        message:"Subscribe",
-        isSubscribed:false
+        message1:"Subscribe",
+        isSubscribed:false,
+        message2:"Subscribed Thanks"
     }
 
     handleSubscribe = ()=>{
@@ -23,7 +24,17 @@ class ButtonComponent1 extends Component{
     }
     render(){
         return (
-            <button onClick={this.handleSubscribe}>{this.state.isSubscribed ? "Subscribed Thanks":"Subscribe"}</button>
+            <>
+            <button className="button" onClick={this.handleSubscribe}>{this.state.isSubscribed ? this.state.message2 : this.state.message1 }</button>
+
+            {
+                this.state.isSubscribed
+                ?
+                <h2>Thanks for Subscribing</h2>
+                :
+                <h2>Please Subscribe</h2>
+            }
+            </>
         )
     }
 }
