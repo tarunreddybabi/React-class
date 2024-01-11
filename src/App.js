@@ -8,6 +8,9 @@ import { UnorderedListComponents } from './components/list/ol-ul';
 import ButtonComponent1 from './components/classbased/button1';
 import ColorChange from './components/classbased/color';
 import ImageChange from './components/classbased/image';
+import ApiCall from './components/exceptional-handling/api-call';
+import ApiCall2 from './components/exceptional-handling/api-call2';
+import ApiCall3 from './components/exceptional-handling/api-call3';
 
 function App() {
   const tableElements={Invoice:"1001",Customer:"Mark Otto",
@@ -118,6 +121,10 @@ function App() {
   <ButtonComponent1/>
   <ColorChange/>
   <ImageChange/>
+  <ApiCall/><br/><br/>
+  <ApiCall2/><br/><br/>
+  <ApiCall3/>
+
 
       </div>
 
