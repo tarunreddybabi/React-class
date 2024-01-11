@@ -5,12 +5,16 @@ import TableItem from './components/table/table';
 import {FormItem} from './components/form/form';
 import { OrderedListComponents } from './components/list/ol-ul';
 import { UnorderedListComponents } from './components/list/ol-ul';
-import ButtonComponent1 from './components/classbased/button1';
-import ColorChange from './components/classbased/color';
-import ImageChange from './components/classbased/image';
-import ApiCall from './components/exceptional-handling/api-call';
-import ApiCall2 from './components/exceptional-handling/api-call2';
-import ApiCall3 from './components/exceptional-handling/api-call3';
+import ButtonComponent1 from './components/classBased/button1';
+import ColorChange from './components/classBased/color';
+import ImageChange from './components/classBased/image';
+import ApiCall from './components/exceptionalHandling/api-call';
+import ApiCall2 from './components/exceptionalHandling/api-call2';
+import ApiCall3 from './components/exceptionalHandling/api-call3';
+import InlineStyle from './components/styling/inline-style';
+import ExternalStyle from './components/styling/external-style';
+import ModuleStyle from './components/styling/module-style';
+import Card from './components/card/card';
 
 function App() {
   const tableElements={Invoice:"1001",Customer:"Mark Otto",
@@ -124,7 +128,10 @@ function App() {
   <ApiCall/><br/><br/>
   <ApiCall2/><br/><br/>
   <ApiCall3/>
-
+  <InlineStyle/>
+  <ExternalStyle/>
+  <ModuleStyle/><hr/><br/>
+  <Card/>
 
       </div>
 
