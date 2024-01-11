@@ -131,7 +131,7 @@ function App() {
   <InlineStyle/>
   <ExternalStyle/>
   <ModuleStyle/><hr/><br/>
-  <Card/>
+  <Card/><br/>
 
       </div>
 
