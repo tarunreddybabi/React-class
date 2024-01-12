@@ -1,31 +1,36 @@
-
-
-
-.card{
-    margin-top: 10px;
-    margin-left: 37%;
-    border-radius: 12px;
-    box-shadow: 2px 4px;
-    height: 620px;
-    width: 340px;
-    border: 2px solid black;
-    margin-bottom: 10px;
+.card1 {
+  margin-top: 10px;
+  margin-left: 37%;
+  border-radius: 12px;
+  box-shadow: 2px 4px;
+  height: 620px;
+  width: 340px;
+  border: 2px solid black;
+  margin-bottom: 10px;
 }
-.content{
-    margin-top: 0px;
-    border-radius: 12px;
+.content1 {
+  margin-top: 0px;
+  border-radius: 12px;
 }
-.card-img{
-    height: 280px;
-    width: 100%;
+.card-img1 {
+  height: 280px;
+  width: 100%;
 }
-.para{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: large;
-    font-weight: bold;
+.para1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: large;
+  font-weight: bold;
 }
-.btn{
-    width: 150px;
-    font-size: large;
-    font-weight: bold;
+.btn12 {
+  width: 150px;
+  font-size: large;
+  font-weight: bold;
+  margin-left: 70px;
+  margin-bottom: 20px;
+}
+.space {
+  margin-bottom: 20px;
+}
+.m1 {
+  text-align: center;
 }

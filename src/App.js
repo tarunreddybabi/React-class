@@ -5,16 +5,17 @@ import TableItem from './components/table/table';
 import {FormItem} from './components/form/form';
 import { OrderedListComponents } from './components/list/ol-ul';
 import { UnorderedListComponents } from './components/list/ol-ul';
-import ButtonComponent1 from './components/classBased/button1';
-import ColorChange from './components/classBased/color';
-import ImageChange from './components/classBased/image';
-import ApiCall from './components/exceptionalHandling/api-call';
-import ApiCall2 from './components/exceptionalHandling/api-call2';
-import ApiCall3 from './components/exceptionalHandling/api-call3';
+import ButtonComponent1 from './components/class-based/button1';
+import ColorChange from './components/class-based/color';
+import ImageChange from './components/class-based/image';
+import ApiCall from './components/exceptional-handling/api-call';
+import ApiCall2 from './components/exceptional-handling/api-call2';
+import ApiCall3 from './components/exceptional-handling/api-call3';
 import InlineStyle from './components/styling/inline-style';
 import ExternalStyle from './components/styling/external-style';
 import ModuleStyle from './components/styling/module-style';
 import Card from './components/card/card';
+import BootstrapComponent from './components/bootstrap/first-component';
 
 function App() {
   const tableElements={Invoice:"1001",Customer:"Mark Otto",
@@ -132,6 +133,7 @@ function App() {
   <ExternalStyle/>
   <ModuleStyle/><hr/><br/>
   <Card/><br/>
+  <BootstrapComponent/>
 
       </div>
 
