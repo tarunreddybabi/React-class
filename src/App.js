@@ -19,7 +19,8 @@ import BootstrapComponent from "./components/bootstrap/first-component";
 import ParentComponent from "./components/props/parent";
 import FormBoot from "./components/bootstrap/form";
 import TableBoot from "./components/bootstrap/table";
-import NavScrollExample from "./components/bootstrap/navbar"
+import NavScrollExample from "./components/bootstrap/navbar";
+import Counter from "./components/counter/counter";
 
 function App() {
   const tableElements = {
@@ -32,7 +33,7 @@ function App() {
   const { Invoice, Customer, SHP, Price, PurchasedPrice } = tableElements;
   return (
     <div>
-  <NavScrollExample/>
+      <NavScrollExample />
       <br></br>
       <table class="th" id="table">
         <tr class="th">
@@ -175,9 +176,10 @@ function App() {
       <Card />
       <br />
       <BootstrapComponent />
-      <ParentComponent/>
-      <FormBoot/>
-      <TableBoot/>
+      <FormBoot />
+      <TableBoot />
+      <ParentComponent />
+      <Counter/>
     </div>
   );
 }

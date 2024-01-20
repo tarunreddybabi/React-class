@@ -37,7 +37,7 @@ const BootstrapComponent = () => {
 
           {data.map((val,ind)=>(
             <div class="col-sm-4">
-              <ProfileCard details={val}/>
+              <ProfileCard details={val} key={ind}/>
             </div>
           ))}
           

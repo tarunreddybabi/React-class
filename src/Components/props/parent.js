@@ -11,8 +11,19 @@ const ParentComponent=()=>{
         <Button1 color="red">
             Submit
         </Button1>
+        <Receiver>
+            <h2>Hi I'm children</h2>
+        </Receiver>
         </>
     )
 }
 
 export default ParentComponent
+
+const Receiver=({children})=>{
+    return (
+        <>
+        {children}
+        </>
+    )
+}
