@@ -11,7 +11,7 @@
 //     }
 // }
 
-const ChildButton=(increment)=>{
+const ChildButton=({increment})=>{
     return(
         <button onClick={()=>increment()}>Increment by 1 </button>
     )
