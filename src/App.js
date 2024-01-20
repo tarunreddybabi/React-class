@@ -21,8 +21,12 @@ import FormBoot from "./components/bootstrap/form";
 import TableBoot from "./components/bootstrap/table";
 import NavScrollExample from "./components/bootstrap/navbar";
 import Counter from "./components/counter/counter";
+import Mounting1 from "./components/lifecycle/mounting/mounting";
 
 function App() {
+
+  const greenColor="green"
+
   const tableElements = {
     Invoice: "1001",
     Customer: "Mark Otto",
@@ -180,6 +184,7 @@ function App() {
       <TableBoot />
       <ParentComponent />
       <Counter/>
+      <Mounting1 color={greenColor}/>
     </div>
   );
 }
