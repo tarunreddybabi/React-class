@@ -22,6 +22,8 @@ import TableBoot from "./components/bootstrap/table";
 import NavScrollExample from "./components/bootstrap/navbar";
 import Counter from "./components/counter/counter";
 import Mounting1 from "./components/lifecycle/mounting/mounting";
+import UpdatePhase from "./components/lifecycle/updating/updating";
+import Unmounting from "./components/lifecycle/unmount/unmounting";
 
 function App() {
 
@@ -185,6 +187,8 @@ function App() {
       <ParentComponent />
       <Counter/>
       <Mounting1 color={greenColor}/>
+      <UpdatePhase favColor="brown"/><br/>
+      <Unmounting/>
     </div>
   );
 }
