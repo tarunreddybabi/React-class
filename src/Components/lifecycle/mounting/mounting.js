@@ -43,7 +43,7 @@ class Mounting1 extends Component {
                     <Card.Img
                       variant="top"
                       src={data.image}
-                      style={{ width: "140px" }}
+                      style={{ width: "140px",height:"160px" }}
                     />
                     <Card.Body>
                       <Card.Title>{data.title}</Card.Title>
