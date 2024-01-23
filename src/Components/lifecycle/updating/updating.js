@@ -46,7 +46,6 @@ class UpdatePhase extends Component{
     }
 
     render(){
-        console.log("render");
         return(
             <>
             <h2 style={{color:this.state.color}}>Updating phase</h2>
