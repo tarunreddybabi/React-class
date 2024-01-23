@@ -24,80 +24,82 @@ import Counter from "./components/counter/counter";
 import Mounting1 from "./components/lifecycle/mounting/mounting";
 import UpdatePhase from "./components/lifecycle/updating/updating";
 import Unmounting from "./components/lifecycle/unmount/unmounting";
+import UseStateExample1 from "./components/hooks/use-state/useStateEx1";
+import UseStateExample2 from "./components/hooks/use-state/useStateEx2";
+import UseStateExample3 from "./components/hooks/use-state/useStateEx3";
 
 function App() {
+  const greenColor = "green";
 
-  const greenColor="green"
-
-  const tableElements = {
-    Invoice: "1001",
-    Customer: "Mark Otto",
-    SHP: "Japan",
-    Price: "3000",
-    PurchasedPrice: "1200",
-  };
-  const { Invoice, Customer, SHP, Price, PurchasedPrice } = tableElements;
+  // const tableElements = {
+  //   Invoice: "1001",
+  //   Customer: "Mark Otto",
+  //   SHP: "Japan",
+  //   Price: "3000",
+  //   PurchasedPrice: "1200",
+  // };
+  // const { Invoice, Customer, SHP, Price, PurchasedPrice } = tableElements;
   return (
     <div>
       <NavScrollExample />
-      <br></br>
-      <table class="th" id="table">
-        <tr class="th">
-          <th class="th">Invoice</th>
-          <th class="th">Customer</th>
-          <th class="th">SHP</th>
-          <th class="th">Price</th>
-          <th class="th">Purchased Price</th>
+      {/* <br></br>
+      <table className="th" id="table">
+      <tr className="th">
+          <td className="th">{Invoice}</td>
+          <td className="th">{Customer} </td>
+          <td className="th">{SHP} </td>
+          <td className="th"> {Price} </td>
+          <td className="th"> {PurchasedPrice} </td>
         </tr>
-        <tr class="th">
-          <td class="th">{Invoice}</td>
-          <td class="th">{Customer} </td>
-          <td class="th">{SHP} </td>
-          <td class="th"> {Price} </td>
-          <td class="th"> {PurchasedPrice} </td>
+        <tr className="th">
+          <td className="th">{Invoice}</td>
+          <td className="th">{Customer} </td>
+          <td className="th">{SHP} </td>
+          <td className="th"> {Price} </td>
+          <td className="th"> {PurchasedPrice} </td>
         </tr>
-        <tr class="th">
-          <td class="th">{Invoice}</td>
-          <td class="th">{Customer} </td>
-          <td class="th">{SHP} </td>
-          <td class="th"> {Price} </td>
-          <td class="th"> {PurchasedPrice} </td>
+        <tr className="th">
+          <td className="th">{Invoice}</td>
+          <td className="th">{Customer} </td>
+          <td className="th">{SHP} </td>
+          <td className="th"> {Price} </td>
+          <td className="th"> {PurchasedPrice} </td>
         </tr>
 
-        <tr class="th">
-          <td class="th">{Invoice}</td>
-          <td class="th">{Customer} </td>
-          <td class="th">{SHP} </td>
-          <td class="th"> {Price} </td>
-          <td class="th"> {PurchasedPrice} </td>
+        <tr className="th">
+          <td className="th">{Invoice}</td>
+          <td className="th">{Customer} </td>
+          <td className="th">{SHP} </td>
+          <td className="th"> {Price} </td>
+          <td className="th"> {PurchasedPrice} </td>
         </tr>
-        <tr class="th">
-          <td class="th">{Invoice}</td>
-          <td class="th">{Customer} </td>
-          <td class="th">{SHP} </td>
-          <td class="th"> {Price} </td>
-          <td class="th"> {PurchasedPrice} </td>
+        <tr className="th">
+          <td className="th">{Invoice}</td>
+          <td className="th">{Customer} </td>
+          <td className="th">{SHP} </td>
+          <td className="th"> {Price} </td>
+          <td className="th"> {PurchasedPrice} </td>
         </tr>
-        <tr class="th">
-          <td class="th">{Invoice}</td>
-          <td class="th">{Customer} </td>
-          <td class="th">{SHP} </td>
-          <td class="th"> {Price} </td>
-          <td class="th"> {PurchasedPrice} </td>
+        <tr className="th">
+          <td className="th">{Invoice}</td>
+          <td className="th">{Customer} </td>
+          <td className="th">{SHP} </td>
+          <td className="th"> {Price} </td>
+          <td className="th"> {PurchasedPrice} </td>
         </tr>
-        <tr class="th">
-          <td class="th">{Invoice}</td>
-          <td class="th">{Customer} </td>
-          <td class="th">{SHP} </td>
-          <td class="th"> {Price} </td>
-          <td class="th"> {PurchasedPrice} </td>
+        <tr className="th">
+          <td className="th">{Invoice}</td>
+          <td className="th">{Customer} </td>
+          <td className="th">{SHP} </td>
+          <td className="th"> {Price} </td>
+          <td className="th"> {PurchasedPrice} </td>
         </tr>
       </table>
       <ButtonComponent></ButtonComponent>
       <TableItem />
       <ButtonComponent></ButtonComponent>
       <br></br>
-      <button class="btn">Submit</button>
+      <button className="btn">Submit</button>
       <br />
 
       <form>
@@ -105,11 +107,11 @@ function App() {
         <label for="fname" id="name">
           First Name:
         </label>
-        <input type="text" id="fname" class="fname" />
+        <input type="text" id="fname" className="fname" />
         <br />
         <br />
         <label for="name">Last Name:</label>
-        <input type="text" id="lname" class="lname" />
+        <input type="text" id="lname" className="lname" />
         <br />
         <br />
         <label for="email">Email:</label>
@@ -158,7 +160,7 @@ function App() {
         <br />
         <br />
         <input type="submit" value="Submit" id="submit" />
-      </form>
+      </form> */}
 
       <FormItem></FormItem>
       <ButtonComponent />
@@ -185,10 +187,14 @@ function App() {
       <FormBoot />
       <TableBoot />
       <ParentComponent />
-      <Counter/>
-      <Mounting1 color={greenColor}/>
-      <UpdatePhase favColor="brown"/><br/>
-      <Unmounting/>
+      <Counter />
+      <Mounting1 color={greenColor} />
+      <UpdatePhase favColor="brown" />
+      <br />
+      <Unmounting />
+      <UseStateExample1 />
+      <UseStateExample2 />
+      <UseStateExample3/>
     </div>
   );
 }
