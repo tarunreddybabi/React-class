@@ -1,4 +1,4 @@
-const formdetails = [
+const formDetails = [
   {
     id: "1",
     Company: "TCS",
@@ -31,7 +31,7 @@ const formdetails = [
 
 const TableItem = () => {
   return (
-    <div>
+    <>
       <table className="th" id="table">
         <tr className="th">
           <th className="th">Company</th>
@@ -40,8 +40,8 @@ const TableItem = () => {
           <th className="th">Change %</th>
         </tr>
 
-        {formdetails.map((val) => (
-          <tr className="th">
+        {formDetails.map((val) => (
+          <tr key={val.id} className="th">
             <td className="th">{val.Company} </td>
             <td className="th"> {val.Price}</td>
             <td className="th">{val.Change} </td>
@@ -49,7 +49,7 @@ const TableItem = () => {
           </tr>
         ))}
       </table>
-    </div>
+    </>
   );
 };
 export default TableItem;
