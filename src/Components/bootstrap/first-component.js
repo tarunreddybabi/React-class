@@ -27,17 +27,17 @@ const BootstrapComponent = () => {
   return (
     <>
    
-      <div class="container-fluid p-5 bg-primary text-white text-center">
+      <div className="container-fluid p-5 bg-primary text-white text-center">
         <h1>My First Bootstrap Page</h1>
         <p>Resize this responsive page to see the effect!</p>
       </div>
 
-      <div class="container mt-5">
-        <div class="row">
+      <div className="container mt-5">
+        <div className="row">
 
           {data.map((val,ind)=>(
-            <div class="col-sm-4">
-              <ProfileCard details={val} key={ind}/>
+            <div className="col-sm-4" key={ind}>
+              <ProfileCard details={val} />
             </div>
           ))}
           
