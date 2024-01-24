@@ -28,6 +28,7 @@ import UseStateExample1 from "./components/hooks/use-state/useStateEx1";
 import UseStateExample2 from "./components/hooks/use-state/useStateEx2";
 import UseStateExample3 from "./components/hooks/use-state/useStateEx3";
 import UseStateExample4 from "./components/hooks/use-state/useStateEx4";
+import Uncontrolled from "./components/form/uncontrolled";
 
 function App() {
   const greenColor = "green";
@@ -197,6 +198,7 @@ function App() {
       <UseStateExample2 />
       <UseStateExample3/>
       <UseStateExample4/>
+      <Uncontrolled/>
     </div>
   );
 }
