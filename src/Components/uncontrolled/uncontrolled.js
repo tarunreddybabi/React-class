@@ -1,10 +1,11 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 const Uncontrolled = () => {
   const usernameRef = useRef();
   const passwordRef = useRef();
+  const [error,setError]=useState("")
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -30,7 +31,15 @@ const Uncontrolled = () => {
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then(res=>console.log(res))
+      .then(res=>
+        {if(res.message){
+          
+          setError(res.message)
+        }else{
+          alert("successfully login")
+          setError("")
+        }
+        console.log(res)})
       .catch(err=>console.log(err))
   };
 
@@ -55,6 +64,11 @@ const Uncontrolled = () => {
           />
         </Form.Group>
 
+        {
+          error?
+          <h2 style={{color:"red"}}>{error}</h2>:
+          null
+        }
         <Button variant="primary" type="submit">
           Submit
         </Button>
