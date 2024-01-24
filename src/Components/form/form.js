@@ -14,7 +14,7 @@ export const FormItem = () => {
 
   const { FirstName, LastName, Mail, Gender, Male, Female, Others, Age } = details;
 
-  // State variables for controlled components
+ 
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
