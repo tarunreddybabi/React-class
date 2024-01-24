@@ -8,8 +8,8 @@ const Circle = () => {
   };
 
   const circleClick = (index) => {
-    const updateCircles = circles.map((value, idx) =>
-      idx === index ? !value : value
+    const updateCircles = circles.map((value, id) =>
+      id=== index ? !value : value
     );
     setCircles(updateCircles);
   };
