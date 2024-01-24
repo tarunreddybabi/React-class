@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import "./App.css";
 import ButtonComponent from "./components/button/button";
-// import TableItem from "./components/table/table";
+import TableItem from "./components/table/table";
 import { FormItem } from "./components/form/form";
 import { OrderedListComponents } from "./components/list/ol-ul";
 import { UnorderedListComponents } from "./components/list/ol-ul";
@@ -97,12 +97,7 @@ function App() {
           <td className="th"> {PurchasedPrice} </td>
         </tr>
       </table>
-      <ButtonComponent></ButtonComponent>
-      <TableItem />
-      <ButtonComponent></ButtonComponent>
-      <br></br>
-      <button className="btn">Submit</button>
-      <br />
+      
 
       <form>
         <h1>Form</h1>
@@ -164,6 +159,12 @@ function App() {
         <input type="submit" value="Submit" id="submit" />
       </form> */}
 
+      <ButtonComponent></ButtonComponent>
+      <TableItem />
+      <ButtonComponent></ButtonComponent>
+      <br></br>
+      <button className="btn">Submit</button>
+      <br />
       <FormItem></FormItem>
       <ButtonComponent />
       <OrderedListComponents />
@@ -196,9 +197,9 @@ function App() {
       <Unmounting />
       <UseStateExample1 />
       <UseStateExample2 />
-      <UseStateExample3/>
-      <UseStateExample4/>
-      <Uncontrolled/>
+      <UseStateExample3 />
+      <UseStateExample4 />
+      <Uncontrolled />
     </div>
   );
 }

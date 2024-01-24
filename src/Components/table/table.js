@@ -1,3 +1,6 @@
+import React from 'react';
+
+
 const formDetails = [
   {
     id: "1",
@@ -33,13 +36,16 @@ const TableItem = () => {
   return (
     <>
       <table className="th" id="table">
+      <thead className="th">
         <tr className="th">
           <th className="th">Company</th>
           <th className="th">Price</th>
           <th className="th">Change</th>
           <th className="th">Change %</th>
         </tr>
+        </thead>
 
+        <tbody>
         {formDetails.map((val) => (
           <tr key={val.id} className="th">
             <td className="th">{val.Company} </td>
@@ -48,6 +54,7 @@ const TableItem = () => {
             <td className="th"> {val.ChangePercentile} </td>
           </tr>
         ))}
+        </tbody>
       </table>
     </>
   );
