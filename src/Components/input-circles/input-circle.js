@@ -21,7 +21,7 @@ const InputCircles = () => {
         style={{
           height: "100px",
           width: "100px",
-          border: "4px solid indigo",
+          border: "4px solid darkblue",
           borderRadius: "50%",
         }}
       >
