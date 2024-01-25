@@ -16,46 +16,55 @@ const Controlled = () => {
   };
 
   const passwordHandler = (event) => {
-    setPassword(event.target.value);
-    const result = validatePassword(event.target.value);
-    if (result) {
-      console.log("password valid");
-      console.log(event.target.value);
-      setPasswordError("");
-    } else {
-      setPasswordError("password invalid");
-      console.log(event.target.value);
-
-    }
+    const newPassword = event.target.value;
+    setPassword(newPassword);
+    const errorMessage = validatePassword(newPassword);
+    setPasswordError(errorMessage);
   };
 
-  const username = "john1";
+  const username = userName;
 
   function validatePassword(psw) {
-    let msg = true;
-
-    switch (true) {
-      case psw.length < 8 || psw.length > 13:
-        msg = false;
-        break;
-      case !/[0-9]/.test(psw):
-        msg = false;
-        break;
-      case psw === psw.toLowerCase() || psw === psw.toUpperCase():
-        msg = false;
-        break;
-      case psw.includes(username):
-        msg = false;
-        break;
-      default:
-        msg = true;
+    if (psw.length < 8 || psw.length > 13) {
+      return "Password length must be between 8 and 13 characters";
     }
-    return msg;
+    if (!/[0-9]/.test(psw)) {
+      return "Password must contain a number";
+    }
+    if(!/[!@#$%^&*(),.?":{}|<>]/.test(psw)){
+        return "password must contain a special character"
+    }
+    if (psw === psw.toLowerCase() || psw === psw.toUpperCase()) {
+      return "Password should contain both uppercase and lowercase letters";
+    }
+    if (psw.includes(username)) {
+      return "Password should not contain the username";
+    }
+    return "";
+  }
+
+  const submitHandler=(event)=>{
+    event.preventDefault()
+
+    const userInfo={
+        userName,password
+    }
+    console.log("userDetails",userInfo)
+
+  }
+
+  const isFormValid=()=>{
+    return(
+        userName.length>0 &&
+        password.length>0 &&
+        userNameError === "" &&
+        passwordError === ""
+    )
   }
 
   return (
     <>
-      <form>
+      <form onSubmit={submitHandler}>
         <div className="mb-3 mt-3">
           <label className="form-label">User Name:</label>
           <input
@@ -66,7 +75,11 @@ const Controlled = () => {
             name="username"
             value={userName}
             onChange={userNameHandler}
-            style={userNameError ? { border: "2px solid red" } : {border:"2px solid green"}}
+            style={
+              userNameError
+                ? { border: "2px solid red" }
+                : { border: "4px solid green" }
+            }
           />
           {userNameError ? (
             <h4 style={{ color: "red" }}>{userNameError}</h4>
@@ -81,15 +94,21 @@ const Controlled = () => {
             placeholder="Enter password"
             value={password}
             onChange={passwordHandler}
-            style={passwordError ?{border:"2px solid red"}:{border:"2px solid green"} }
+            style={
+              passwordError
+                ? { border: "2px solid red" }
+                : { border: "4px solid green" }
+            }
           />
-          {passwordError ? <h4 style={{color:"red"}}>{passwordError}</h4> : null}
+          {passwordError ? (
+            <h4 style={{ color: "red" }}>{passwordError}</h4>
+          ) : null}
         </div>
-        {userNameError || passwordError ? null : (
-          <button type="submit" className="btn btn-primary">
+       
+          <button type="submit" className="btn btn-primary" disabled={!isFormValid()}>
             Submit
           </button>
-        )}
+        
       </form>
     </>
   );
