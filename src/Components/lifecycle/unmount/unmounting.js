@@ -27,9 +27,9 @@ class Unmounting extends Component{
         })
     }
 
-    // componentWillUnmount(){
-    //     alert("I am removed")
-    // }
+    componentWillUnmount(){
+        alert("I am removed")
+    }
 
     render(){
 
