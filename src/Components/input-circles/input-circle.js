@@ -6,7 +6,6 @@ const InputCircles = () => {
   const submitHandler = (event) => {
     event.preventDefault();
     const result = parseInt(event.target.elements["add-circle"].value);
-    console.log(result);
     if (!isNaN(result) && result >= 1 && result <= 50) {
       setNumberOfCircles(result);
     } else {
