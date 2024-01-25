@@ -30,6 +30,7 @@ import UseStateExample3 from "./components/hooks/use-state/useStateEx3";
 import UseStateExample4 from "./components/hooks/use-state/useStateEx4";
 import Uncontrolled from "./components/uncontrolled/uncontrolled";
 import Circle from "./components/circles/circle";
+import Controlled from "./components/controlled/controlled";
 
 function App() {
   const greenColor = "green";
@@ -143,6 +144,7 @@ function App() {
       <UseStateExample4 />
       <Uncontrolled /><br/>
       <Circle/>
+      <Controlled/>
     </div>
   );
 }

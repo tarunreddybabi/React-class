@@ -1,24 +1,38 @@
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+import { useState } from "react";
 
 const Controlled = () => {
+
+    const[userName,setUserName]=useState("")
+    const userNameHandler=(event)=>{
+        console.log(event.target.value)
+        setUserName(event.target.value)
+    }
+
   return (
     <>
-      <Form>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>User Name</Form.Label>
-          <Form.Control type="text" placeholder="Enter Username" />
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
-        </Form.Group>
-
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-      </Form>
+      <form>
+        <div className="mb-3 mt-3">
+          <label className="form-label">User Name:</label>
+          <input
+            type="text"
+            className="form-control"
+            id="username"
+            placeholder="Enter username"
+            name="username"
+            value={userName}
+            onChange={userNameHandler}
+          />
+        </div>
+        <div className="mb-3">
+          <label className="form-label">Password:</label>
+          <input
+            type="password"
+            className="form-control"
+            id="pwd1"
+            placeholder="Enter password"
+          />
+        </div>
+      </form>
     </>
   );
 };
