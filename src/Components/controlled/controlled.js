@@ -90,7 +90,7 @@ const Controlled = () => {
           <input
             type="password"
             className="form-control"
-            id="pwd1"
+            id="pwd2"
             placeholder="Enter password"
             value={password}
             onChange={passwordHandler}
