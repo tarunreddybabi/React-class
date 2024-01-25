@@ -31,6 +31,9 @@ import UseStateExample4 from "./components/hooks/use-state/useStateEx4";
 import Uncontrolled from "./components/uncontrolled/uncontrolled";
 import Circle from "./components/circles/circle";
 import Controlled from "./components/controlled/controlled";
+import Register from "./components/register-page/register";
+import InputCircles from "./components/input-circles/input-circle";
+
 
 function App() {
   const greenColor = "green";
@@ -145,6 +148,9 @@ function App() {
       <Uncontrolled /><br/>
       <Circle/>
       <Controlled/>
+      <Register/>
+      <InputCircles/>
+
     </div>
   );
 }
