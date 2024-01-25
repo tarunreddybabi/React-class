@@ -36,68 +36,68 @@
     transform: rotate(360deg);
   }
 }
-.th{
+.th {
   border: 2px solid black;
   border-collapse: collapse;
   font-weight: bold;
 }
-#table{
-  
+#table {
   margin-top: 50px;
   margin-left: 500px;
 }
-.btn{
-  width:100px;
+.btn {
+  width: 100px;
 }
-input:focus{
-  background-color: rgb(217, 177,239);
-  color:rgb(47,79 , 79);
+input:focus {
+  background-color: rgb(217, 177, 239);
+  color: rgb(47, 79, 79);
 }
-#age:in-range{
+#age:in-range {
   border: 2px solid rgb(4, 0, 255);
 }
-#age:out-of-range{
+#age:out-of-range {
   border: 3px solid red;
 }
-#male,#female,#others:checked{
+#male,
+#female,
+#others:checked {
   height: 15px;
   width: 15px;
 }
-input:required{
+input:required {
   background-color: aquamarine;
 }
 label {
-    margin-left: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+  margin-left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
-textarea{
-    margin-left: 20px;
-}input{
-    margin-left: 20px;
-} form{
+textarea {
+  margin-left: 20px;
+}
+input {
+  margin-left: 20px;
+}
+form {
   border: 2px solid black;
 }
-body{
-  
+body {
   text-align: center;
-  background-color: #0093E9;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-
+  background-color: #8ec5fc;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
 }
-#name{
+#name {
   margin-top: 20px;
 }
-#submit{
+#submit {
   width: 100px;
 }
-li{
+li {
   text-align: left;
 }
-.button{
+.button {
   width: 180px;
   height: 40px;
-  color:red;
+  color: red;
   background-color: black;
 }
-
