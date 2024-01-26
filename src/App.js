@@ -150,7 +150,6 @@ function App() {
       <Controlled/>
       <Register/>
       <InputCircles/>
-
     </div>
   );
 }

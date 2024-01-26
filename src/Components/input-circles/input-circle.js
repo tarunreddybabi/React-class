@@ -44,7 +44,7 @@ const InputCircles = () => {
         </div>
 
         <button type="submit" className="btn btn-primary">
-          click to add circles
+          click to add {numberOfCircles} circles
         </button>
       </form>
       <div style={{ display: "flex", flexWrap: "wrap" }}>{renderCircles()}</div>
