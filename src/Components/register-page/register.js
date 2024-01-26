@@ -47,8 +47,6 @@ const Register = () => {
     setGender(event.target.value);
   };
 
-  const username = userName;
-
   function validatePassword(psw) {
     if (psw.length < 8 || psw.length > 13) {
       return "Password length must be between 8 and 13 characters";
@@ -61,9 +59,6 @@ const Register = () => {
     }
     if (psw === psw.toLowerCase() || psw === psw.toUpperCase()) {
       return "Password should contain both uppercase and lowercase letters";
-    }
-    if (psw.includes(username)) {
-      return "Password should not contain the username";
     }
     return "";
   }
