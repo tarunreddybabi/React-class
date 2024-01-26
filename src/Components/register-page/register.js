@@ -5,10 +5,13 @@ const Register = () => {
   const [userNameError, setUserNameError] = useState("");
   const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  const[email,setEmail]=useState("")
-  const[emailError,setEmailError]=useState("")
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [confirmPasswordError, setConfirmPasswordError] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [gender, setGender] = useState("male");
 
   const userNameHandler = (event) => {
     setUserName(event.target.value);
@@ -26,11 +29,23 @@ const Register = () => {
     setPasswordError(errorMessage);
   };
 
-  const emailHandler=(event)=>{
-    setEmail(event.target.value)
-    validateEmail(event.target.value)
-    
-  }
+  const emailHandler = (event) => {
+    setEmail(event.target.value);
+    const isValid = validateEmail(event.target.value);
+    setEmailError(isValid ? "" : "Invalid Email format");
+  };
+
+  const firstNameHandler = (event) => {
+    setFirstName(event.target.value);
+  };
+
+  const lastNameHandler = (event) => {
+    setLastName(event.target.value);
+  };
+
+  const genderHandler = (event) => {
+    setGender(event.target.value);
+  };
 
   const username = userName;
 
@@ -62,23 +77,28 @@ const Register = () => {
   };
 
   const validateEmail = (email) => {
-    const isValid = String(email)
+    return String(email)
       .toLowerCase()
       .match(
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       );
-    setEmailError(isValid ? "" : "Invalid email format");
   };
-
 
   const submitHandler = (event) => {
     event.preventDefault();
+    const existingUsers = JSON.parse(localStorage.getItem("data")) || [];
+    const userExists = existingUsers.some(
+      (user) => user.username === userName || user.email === email
+    );
 
-    const userInfo = {
-      userName,
-      password,
-    };
-    console.log("userDetails", userInfo);
+    if (userExists) {
+      alert("User already registered");
+      return;
+    }
+    const userInfo = { userName, password, email, firstName, lastName };
+    existingUsers.push(userInfo);
+    localStorage.setItem("data", JSON.stringify(existingUsers));
+    console.log("User Details", userInfo);
   };
 
   const isFormValid = () => {
@@ -88,10 +108,11 @@ const Register = () => {
       userNameError === "" &&
       passwordError === "" &&
       emailError === "" &&
-      confirmPasswordError === ""
+      confirmPasswordError === "" &&
+      firstName.length > 0 &&
+      lastName.length > 0
     );
   };
-  
 
   return (
     <>
@@ -104,6 +125,8 @@ const Register = () => {
             id="f-name"
             placeholder="First Name"
             name="f-name"
+            value={firstName}
+            onChange={firstNameHandler}
           />
         </div>
         <div className="mb-3">
@@ -114,12 +137,19 @@ const Register = () => {
             id="l-name"
             placeholder="Last Name"
             name="l-name"
+            value={lastName}
+            onChange={lastNameHandler}
           />
         </div>
 
         <div className="mb-3">
           <label className="form-label">Gender:</label>
-          <select id="gender" name="gender">
+          <select
+            id="gender"
+            name="gender"
+            value={gender}
+            onChange={genderHandler}
+          >
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="others">Others</option>
@@ -136,14 +166,11 @@ const Register = () => {
             name="username"
             value={userName}
             onChange={userNameHandler}
-            style={
-              userNameError
-                ? { border: "2px solid red" }
-                : { border: "4px solid green" }
-            }
+            style={userNameError ? { border: "3px solid red" } : null}
           />
-          {userNameError?
-          <h3 style={{color:"Red"}}>{userNameError}</h3>:null}
+          {userNameError ? (
+            <h3 style={{ color: "Red" }}>{userNameError}</h3>
+          ) : null}
         </div>
 
         <div className="mb-3 mt-3">
@@ -156,14 +183,9 @@ const Register = () => {
             name="email"
             value={email}
             onChange={emailHandler}
-            style={
-              emailError
-                ? { border: "2px solid red" }
-                : { border: "4px solid green" }
-            }
+            style={emailError ? { border: "3px solid red" } : null}
           />
-          {emailError?<h3 style={{color:"red"}}>{emailError}</h3>:null}
-
+          {emailError ? <h3 style={{ color: "red" }}>{emailError}</h3> : null}
         </div>
         <div className="mb-3">
           <label className="form-label">Password:</label>
@@ -175,15 +197,11 @@ const Register = () => {
             name="pwd"
             value={password}
             onChange={passwordHandler}
-            style={
-              passwordError
-                ? { border: "2px solid red" }
-                : { border: "4px solid green" }
-            }
+            style={passwordError ? { border: "3px solid red" } : null}
           />
-          {passwordError?
-          <h3 style={{color:"red"}}>{passwordError}</h3>:
-          null}
+          {passwordError ? (
+            <h3 style={{ color: "red" }}>{passwordError}</h3>
+          ) : null}
         </div>
         <div className="mb-3">
           <label className="form-label">Confirm the Password:</label>
@@ -195,19 +213,17 @@ const Register = () => {
             name="confirm-pwd"
             value={confirmPassword}
             onChange={confirmPasswordHandler}
-            style={confirmPasswordError? { border: "2px solid red" }
-            : { border: "4px solid green" }}
+            style={confirmPasswordError ? { border: "2px solid red" } : null}
           />
-          {confirmPasswordError?
-          <h3 style={{color:"Red"}}>{confirmPasswordError}</h3>:null
-          }
-
+          {confirmPasswordError ? (
+            <h3 style={{ color: "Red" }}>{confirmPasswordError}</h3>
+          ) : null}
         </div>
 
         <button
           type="submit"
           className="btn btn-primary"
-          disabled={!isFormValid}
+          disabled={!isFormValid()}
         >
           Submit
         </button>
