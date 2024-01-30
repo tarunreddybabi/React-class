@@ -33,6 +33,8 @@ import Circle from "./components/circles/circle";
 import Controlled from "./components/controlled/controlled";
 import Register from "./components/register-page/register";
 import InputCircles from "./components/input-circles/input-circle";
+import NavigationStack from "./navigationStack/navigation";
+
 
 
 function App() {
@@ -150,6 +152,8 @@ function App() {
       <Controlled/>
       <Register/>
       <InputCircles/>
+      <NavigationStack/>
+      
     </div>
   );
 }
