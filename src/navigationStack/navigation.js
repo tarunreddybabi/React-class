@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HomeScreen from "../screens/postLoginScreens/home";
-import ProductsScreen from "../screens/postLoginScreens/product";
-import SettingsScreen from "../screens/postLoginScreens/setting";
+import HomeScreen from "../screens/postLoginScreens/homeScreen";
+import ProductsScreen from "../screens/postLoginScreens/productScreen";
+import SettingsScreen from "../screens/postLoginScreens/settingScreen";
 import AboutScreen from "../screens/postLoginScreens/aboutScreen";
 import InvalidScreen from "../screens/invalidScreen";
 
