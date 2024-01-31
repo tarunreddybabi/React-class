@@ -11,9 +11,9 @@ const AboutScreen = () => {
           <input
             type="email"
             className="form-control"
-            id="email"
+            id="email1"
             placeholder="Enter email"
-            name="email"
+            name="email1"
           />
         </div>
         <div className="mb-3">
@@ -21,18 +21,17 @@ const AboutScreen = () => {
           <input
             type="password"
             className="form-control"
-            id="pwd"
             placeholder="Enter password"
             name="pwd1"
           />
         </div>
         <div className="form-check mb-3">
-          <label for="comment">Comments:</label>
+          <label htmlFor="comment">Comments:</label>
           <textarea
-            class="form-control"
+            className="form-control"
             rows="5"
-            id="comment"
-            name="text"
+            id="comment1"
+            name="text1"
           ></textarea>
         </div>
 

@@ -1,25 +1,25 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
+const UseEffect2 = () => {
+  const [count, setCount] = useState(0);
 
+  useEffect(() => {
+    const updateCounterValue = () => {
+      document.title = `Count ${count}`;
+    };
 
-const UseEffect2=()=>{
+    updateCounterValue();
+  }, [count]);
 
-    const [count,setCount]=useState(0)
+  const handleIncrement = () => {
+    setCount(count + 1);
+  };
 
-    useEffect(()=>{
-        updateCounterValue()
-    },[])
-
-    const updateCounterValue=()=>{
-        setCount(count+1)
-        document.title=`Count ${count}`
-    }
-    return(
-        <>
-        <h1>UseEffect2</h1>
-        
-        </>
-    )
-
-}
-export default UseEffect2
+  return (
+    <>
+      <h1>UseEffect-2 {count} </h1>
+      <button onClick={handleIncrement}>Click to update</button>
+    </>
+  );
+};
+export default UseEffect2;
