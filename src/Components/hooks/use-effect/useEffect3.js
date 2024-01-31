@@ -2,9 +2,9 @@ import { useEffect } from "react";
 
 const UseEffect3 = () => {
   useEffect(() => {
-    addEvent();
+    addEvent()
     return () => {
-      removeEvent();
+        removeEvent()
     };
   }, []);
   const addEvent = () => {
