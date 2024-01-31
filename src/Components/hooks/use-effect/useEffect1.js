@@ -43,7 +43,7 @@ const UseEffect1 = () => {
 
 export default UseEffect1;
 
-const ProductListing = ({ data }) => {
+ const ProductListing = ({ data }) => {
   return (
     <>
       <div>
@@ -63,3 +63,4 @@ const ProductListing = ({ data }) => {
     </>
   );
 };
+
