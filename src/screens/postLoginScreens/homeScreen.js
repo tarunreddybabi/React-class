@@ -39,8 +39,8 @@ const HomeScreen = () => {
           <ProductListingComponent 
             key={product.id} 
             data={product} 
-            setTotalPrice={setTotalPrice} // Pass the setter function
-            totalPrice={totalPrice} // Pass the total price
+            setTotalPrice={setTotalPrice} 
+            totalPrice={totalPrice} 
           />
         ))
       ) : (
