@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react";
 import Footer from "../../components/footer/footer";
-// import UseEffect1 from "../../components/hooks/use-effect/useEffect1";
-// import UseEffect2 from "../../components/hooks/use-effect/useEffect2";
-// import UseEffect3 from "../../components/hooks/use-effect/useEffect3";
 import NavBar from "../../components/navBar/navBar";
 import axios from "axios";
 import Spinners from "../../components/loaders/spinners";
@@ -13,21 +10,21 @@ const HomeScreen = () => {
   const [totalPrice, setTotalPrice] = useState(null);
 
   useEffect(() => {
+    const fetchData = () => {
+      axios
+        .get("https://fakestoreapi.com/products")
+        .then((response) => {
+          if (response.status === 200) {
+            setProductsListing(response.data);
+            const result = sumOfPrice(response.data);
+            setTotalPrice(result);
+          }
+        })
+        .catch((error) => console.error("There was an error!", error));
+    };
+  
     fetchData();
   }, []);
-
-  const fetchData = () => {
-    axios
-      .get("https://fakestoreapi.com/products")
-      .then((response) => {
-        if (response.status === 200) {
-          setProductsListing(response.data);
-          const result = sumOfPrice(response.data);
-          setTotalPrice(result);
-        }
-      })
-      .catch((error) => console.error("There was an error!", error));
-  };
 
   const sumOfPrice = (arrayOfObjects) => {
     const result = arrayOfObjects.reduce(
@@ -40,9 +37,6 @@ const HomeScreen = () => {
   return (
     <>
       <NavBar />
-      {/* <UseEffect1/>
-      <UseEffect2/>
-      <UseEffect3/> */}
       <h2>Total value of product : {totalPrice}</h2>
       {productsListing.length > 0 ? (
         productsListing.map((product) => (
