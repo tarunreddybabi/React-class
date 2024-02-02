@@ -18,66 +18,33 @@ const Footer = () => {
 
           <Col md={4}>
 
-            <h5>Column 1</h5>
+            <h5>Home</h5>
 
-            <p>Content for the first column.</p>
-
-          </Col>
-
-          <Col md={4}>
-
-            <h5>Column 2</h5>
-
-            <p>Content for the second column.</p>
+            <p>At Your Service</p>
 
           </Col>
 
           <Col md={4}>
 
-            <h5>Column 3</h5>
+            <h5>Shop</h5>
 
-            <p>Content for the third column.</p>
-
-          </Col>
-
-          {/* Four columns */}
-
-          <Col md={3}>
-
-            <h5>Column 1</h5>
-
-            <p>Content for the first column.</p>
+            <p>Enjoy Shopping</p>
 
           </Col>
 
-          <Col md={3}>
+          <Col md={4}>
 
-            <h5>Column 2</h5>
+            <h5>About US</h5>
 
-            <p>Content for the second column.</p>
-
-          </Col>
-
-          <Col md={3}>
-
-            <h5>Column 3</h5>
-
-            <p>Content for the third column.</p>
+            <p>+91 1234567890</p>
 
           </Col>
-
-          <Col md={3}>
-
-            <h5>Column 4</h5>
-
-            <p>Content for the fourth column.</p>
-
-          </Col>
+        
 
         </Row>
 
-      </Container>
-      © 2024 My Website. All rights reserved.
+      </Container><br/>
+     <p style={{textAlign:"center"}}>© 2024 My Website. All rights reserved.</p> 
 
     </footer>
 
