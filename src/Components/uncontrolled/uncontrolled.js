@@ -1,11 +1,13 @@
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { DataShare } from "../../navigationStack/navigation";
 
 const Uncontrolled = () => {
   const usernameRef = useRef();
   const passwordRef = useRef();
   const [error,setError]=useState("")
+  const {loginTrue} = useContext(DataShare)
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -37,6 +39,8 @@ const Uncontrolled = () => {
           setError(res.message)
         }else{
           alert("successfully login")
+          loginTrue()
+          localStorage.setItem("userToken",JSON.stringify(res))
           setError("")
         }
         console.log(res)})
