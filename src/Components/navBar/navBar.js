@@ -1,6 +1,12 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { DataShare } from "../../navigationStack/navigation";
 
 const NavBar = () => {
+
+ const sharedContext =useContext(DataShare)
+ const {name}=sharedContext
+
   const link = {
     textDecoration: "none",
     color: "gold",
@@ -16,8 +22,8 @@ const NavBar = () => {
       <div className="container-fluid">
         <ul className="navbar-nav">
           <li className="nav-item" style={listStyle}>
-            <Link to="/home" style={link}>
-              Home
+            <Link to="/" style={link}>
+              {name}/Home
             </Link>
           </li>
           <li className="nav-item" style={listStyle}>
@@ -31,7 +37,7 @@ const NavBar = () => {
             </Link>
           </li>
           <li className="nav-item" style={listStyle}>
-            <Link to="/product" style={link}>
+            <Link to="/products" style={link}>
               Products
             </Link>
           </li>

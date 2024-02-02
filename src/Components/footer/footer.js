@@ -77,7 +77,7 @@ const Footer = () => {
         </Row>
 
       </Container>
-      © 2023 My Website. All rights reserved.
+      © 2024 My Website. All rights reserved.
 
     </footer>
 

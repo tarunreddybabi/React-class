@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import NavBar from "../../components/navBar/navBar";
 import Spinners from "../../components/loaders/spinners";
-
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 const ProductDetails = () => {
   const [productDetails, setProductDetails] = useState({});
 
@@ -27,7 +28,19 @@ const ProductDetails = () => {
       <NavBar />
       {Object.keys(productDetails).length > 0 ? (
         <>
-          <h2>{productDetails.category}</h2>
+        <Card  key={productDetails.id} style={{ width: "18rem",margin:"10px" }}>
+                    <Card.Img
+                      variant="top"
+                      src={productDetails.image}
+                      style={{ width: "140px",height:"160px" }}
+                    />
+                    <Card.Body>
+                      <Card.Title>{productDetails.title}</Card.Title>
+                      <Card.Text>{productDetails.description}</Card.Text>
+                      <Card.Text><b>Price : ₹{productDetails.price}</b></Card.Text>
+                      <Button variant="primary">Add to cart</Button>
+                    </Card.Body>
+                  </Card>
         </>
       ) : (
         <Spinners />
