@@ -12,8 +12,6 @@ const Uncontrolled = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log(usernameRef.current.value);
-    console.log(passwordRef.current.value);
     if (passwordRef.current.value.length < 5) {
       alert("Password should be minimum 6 characters");
     } else {
