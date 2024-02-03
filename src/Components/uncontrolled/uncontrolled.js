@@ -41,7 +41,7 @@ const Uncontrolled = () => {
           localStorage.setItem("userToken",JSON.stringify(res))
           setError("")
         }
-        console.log(res)})
+        })
       .catch(err=>console.log(err))
   };
 
