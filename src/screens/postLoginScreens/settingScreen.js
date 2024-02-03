@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import NavBar from "../../components/navBar/navBar";
 import { DataShare } from "../../navigationStack/navigation";
+// import ParentMemo from "../../components/reactMemo/parent";
+import ParentUseMemo from "../../components/hooks/useMemo/parentUseMemo";
 
 const SettingsScreen = () => {
   const { darkTheme } = useContext(DataShare);
@@ -18,6 +20,8 @@ const SettingsScreen = () => {
         }}
       >
         <h2>You're at Settings screen</h2>
+        {/* <ParentMemo/> */}
+        <ParentUseMemo/>
       </div>
     </>
   );
