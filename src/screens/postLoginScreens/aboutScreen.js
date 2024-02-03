@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import NavBar from "../../components/navBar/navBar";
 import { DataShare } from "../../navigationStack/navigation";
+import UseReducerExample from "../../components/hooks/useReducer/useReducer";
 
 const AboutScreen = () => {
   const data = useContext(DataShare);
@@ -9,6 +10,7 @@ const AboutScreen = () => {
   return (
     <>
       <NavBar />
+      <UseReducerExample/>
       <div
         style={{
           backgroundColor: darkTheme ? "black" : "#8ec5fc",
@@ -19,7 +21,7 @@ const AboutScreen = () => {
         }}
       >
         <h2>You're at About screen</h2>
-        <h3>I'm Globally managed {name}</h3>
+        <h3>I'm Globally managed by {name}</h3>
         <form action="/action_page.php">
           <div className="mb-3 mt-3">
             <label className="form-label">Name:</label>

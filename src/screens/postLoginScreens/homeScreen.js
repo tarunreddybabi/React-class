@@ -38,7 +38,6 @@ const HomeScreen = () => {
   const controlTheme = () => {
     changeTheme();
   };
-  console.log(darkTheme);
 
   return (
     <>

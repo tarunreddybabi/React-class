@@ -14,8 +14,8 @@ const PostLogin = () => {
         <Route path="/products" Component={ProductsScreen} />
         <Route path="/setting" Component={SettingsScreen} />
         <Route path="/about" Component={AboutScreen} />
-        <Route path="*" Component={InvalidScreen} />
         <Route path="/productListView/:id" Component={ProductDetails} />
+        <Route path="*" Component={InvalidScreen} />
       </Routes>
     </>
   );
