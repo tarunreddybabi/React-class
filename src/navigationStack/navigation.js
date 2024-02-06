@@ -8,7 +8,7 @@ export const DataShare = createContext();
 const NavigationStack = () => {
   const [name] = useState("Tarun");
   const [darkTheme, setDarkTheme] = useState(false);
-  const [login, setLogin] = useState(false);
+  const [login, setLogin] = useState(true);
 
   const changeTheme = () => {
     setDarkTheme(!darkTheme);
