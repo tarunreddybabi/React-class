@@ -5,11 +5,13 @@ import axios from "axios";
 import Spinners from "../../components/loaders/spinners";
 import { Link } from "react-router-dom";
 import { DataShare } from "../../navigationStack/navigation";
+// import useAxios from "../../components/hooks/custom-hooks/useAxios";
 
 const HomeScreen = () => {
   const [productsListing, setProductsListing] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const { darkTheme, changeTheme } = useContext(DataShare);
+  // const [productsListing]=useAxios()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -41,7 +43,8 @@ const HomeScreen = () => {
 
   return (
     <>
-      <NavBar />
+    
+       <NavBar />
       <div style={{ paddingLeft: "95%" }}>
         <button onClick={controlTheme}>
           <img
@@ -63,7 +66,7 @@ const HomeScreen = () => {
         }}
       >
         <h2>Total value of product : ₹ {totalPrice}</h2>
-        {productsListing.length > 0 ? (
+        {productsListing?.length > 0 ? (
           productsListing.map((product) => (
             <ProductListingComponent
               key={product.id}

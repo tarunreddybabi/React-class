@@ -5,10 +5,14 @@ import NavBar from "../../components/navBar/navBar";
 import Spinners from "../../components/loaders/spinners";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+// import useAxios from "../../components/hooks/custom-hooks/useAxios";
 const ProductDetails = () => {
   const [productDetails, setProductDetails] = useState({});
-
   const routeInformation = useParams();
+
+  // const[productDetails]= useAxios(`https://fakestoreapi.com/products/${routeInformation.id}`)
+
+
   useEffect(() => {
     fetchEachProduct(routeInformation.id);
   }, [routeInformation.id]);
